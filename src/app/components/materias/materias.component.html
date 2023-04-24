@@ -1,0 +1,9 @@
+<h1>
+  Materias, <small> semestre {{ semestreSeleccionado }} </small>
+</h1>
+<hr />
+<div class="row">
+  <div class="col-sm-4" *ngFor="let materia of materias">
+    <app-materia [materia]="materia"></app-materia>
+  </div>
+</div>

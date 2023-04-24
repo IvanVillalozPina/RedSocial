@@ -1,0 +1,13 @@
+<div class="card" style="width: 18rem">
+  <img class="card-img-top" [src]="materia.imagen" alt="UTVT" />
+  <div class="card-body">
+    <h5 class="card-title">{{ materia.cuatrimestre }}° Cuatrimestre</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Materias</h6>
+    <p class="card-text">
+      {{ materia.materias }}
+    </p>
+    <h6>
+      <small>{{ materia.fecha | date : "dd/MM/YYYY" }}</small>
+    </h6>
+  </div>
+</div>

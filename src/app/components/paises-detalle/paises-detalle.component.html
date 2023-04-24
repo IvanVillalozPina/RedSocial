@@ -1,0 +1,41 @@
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" [src]="pais.flags.png" alt="pais"/>
+    <div class="card-body">
+        <h5 class="card-title">
+            {{ pais.name.official }}
+        </h5>
+        <p class="card-text">
+            Informacion general
+        </p>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                Capital: {{ pais.capital }}
+            </li>
+            <li class="list-group-item">
+                Region: {{ pais.region }}
+            </li>
+            <li class="list-group-item">
+                Subregion: {{ pais.subregion }}
+            </li>
+            <li class="list-group-item">
+                Idioma: {{ pais.kustom.languages }}
+            </li>
+            <li class="list-group-item">
+                Poblacion: {{ pais.population }}
+            </li>
+            <li class="list-group-item">
+                <p class="text-success" *ngIf="pais.independent"> 
+                    El pais es libre
+                </p>
+                <p class="text-danger" *ngIf="!pais.independent"> 
+                    El pais no es libre
+                </p>
+            </li>
+        </ul>
+        <div class="d-grid gap-2">
+            <a class="btn btn-primary" routerLink="/paises">
+                Volver
+            </a>
+        </div>
+    </div>
+</div>
